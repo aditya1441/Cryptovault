@@ -1,0 +1,76 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# CryptoVault — Root .gitignore
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+# NEVER commit .env files — they contain passwords, API keys, JWT secrets!
+.env
+.env.local
+.env.*.local
+
+# Block any .env.* EXCEPT .env.example files (those are safe templates)
+.env.*
+!.env.example
+!**/.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.cover
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.idea/
+*.iml
+# Allow our VS Code workspace settings (they're safe and useful for teammates)
+# .vscode/ is NOT ignored — we intentionally include settings.json + extensions.json
+
+# ── Docker local override ─────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Uploads (user-uploaded files, not source code) ───────────────────────────
+backend/uploads/
+
+# ── Database dumps ────────────────────────────────────────────────────────────
+*.sql
+*.dump
+
+# ── Alembic compiled ─────────────────────────────────────────────────────────
+backend/alembic/versions/__pycache__/
