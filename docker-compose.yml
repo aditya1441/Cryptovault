@@ -44,6 +44,8 @@ services:
       MAIL_PASSWORD: ${MAIL_PASSWORD}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      FRONTEND_URL: ${VITE_API_URL:-http://localhost:80}
     ports:
       - "8000:8000"
     healthcheck:
